@@ -1,10 +1,19 @@
-$company_color: #000064
+$default_color: red
 
-a:link
-  color: $company_color
+.faded
+  background-color: fade_out($default_color, 0.4)
 
-aside
-  background-color: $company_color
+.lighten
+  background-color: lighten($default_color, 30%)
 
-nav ul li
-  color: $company_color
+.darken
+  background-color: darken($default_color, 10%)
+
+.grayscale
+  background-color: grayscale($default_color)
+
+.complement
+  background-color: complement($default_color)
+
+.mix
+  background-color: mix($default_color, blue)

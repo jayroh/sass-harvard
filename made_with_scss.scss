@@ -1,7 +1,19 @@
-body {
-  h1 {
-    border : solid 1px green;
-    display : block;
-    width : 100%;
-  }
-}
+$default_color: red;
+
+.faded {
+  background-color: fade_out($default_color, 0.4); }
+
+.lighten {
+  background-color: lighten($default_color, 30%); }
+
+.darken {
+  background-color: darken($default_color, 10%); }
+
+.grayscale {
+  background-color: grayscale($default_color); }
+
+.complement {
+  background-color: complement($default_color); }
+
+.mix {
+  background-color: mix($default_color, blue); }
