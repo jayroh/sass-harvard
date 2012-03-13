@@ -1,10 +1,12 @@
-$company_color: #000064
-
-a:link
-  color: $company_color
-
-aside
-  background-color: $company_color
-
-nav ul li
-  color: $company_color
+nav
+  ul
+    li
+      a
+        &:link
+          border: none
+        &:visited
+          border: red
+        &:hover
+          border: green
+        &:active  
+          border: orange
