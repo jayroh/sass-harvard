@@ -1,7 +1,22 @@
-body {
-  h1 {
-    border : solid 1px green;
-    display : block;
-    width : 100%;
-  }
-}
+$default_color: black;
+$accent_color: orange;
+
+// Example 1: Links
+
+a {
+  text-decoration: none; }
+  a:link {
+    color: fade_out($default_color, 0.2); }
+  a:visited {
+    color: fade_out($default_color, 0.4); }
+  a:hover, a:active {
+    color: $default_color; }
+  a:active {
+    text-decoration: underline; }
+
+// Example #2: Overrides
+
+header h1 {
+  color: $default_color; }
+  body#home header h1 {
+    color: $accent_color; }

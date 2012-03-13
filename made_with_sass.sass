@@ -1,10 +1,23 @@
-$company_color: #000064
+$default_color: black
+$accent_color: orange
 
-a:link
-  color: $company_color
+// Example 1: Links
 
-aside
-  background-color: $company_color
+a
+  text-decoration: none
+  &:link
+    color: fade_out($default_color, 0.2)
+  &:visited
+    color: fade_out($default_color, 0.4)
+  &:hover, &:active
+    color: $default_color
+  &:active
+    text-decoration: underline
 
-nav ul li
-  color: $company_color
+// Example #2: Overrides
+
+header
+  h1
+    color: $default_color
+    body#home &
+      color: $accent_color
