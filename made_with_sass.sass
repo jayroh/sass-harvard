@@ -1,10 +1,23 @@
-$company_color: #000064
+@import "compass"
+@import "susy"
 
-a:link
-  color: $company_color
+$total-cols: 4
+$col-width: 25em
+$gutter-width: 2em
+$side-gutter-width: 1em
+$show-grid-backgrounds: true
 
-aside
-  background-color: $company_color
+body
+  #container 
+    @include container
+    @include susy-grid-background
 
-nav ul li
-  color: $company_color
+    header
+      @include full 
+
+    .left
+      @include alpha
+      @include columns(2)
+    .right
+      @include omega
+      @include columns(2)
