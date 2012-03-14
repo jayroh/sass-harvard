@@ -1,0 +1,41 @@
+INSTALLATION:
+  sudo gem install sass
+  sudo gem install compass
+
+BASICS:
+
+variables - J
+  change color, updates everywhere
+nesting - J 
+  oh wait, what's this ampersand thing?
+ampersand - A
+  two examples
+  point out variables (have some color manipulation going on, we'll get to that)
+extend - J
+  easier to manage style blocks, better CSS output
+mixins - A
+  CSS3 mixins, font-face
+  keep your vendor prefixes and IE hacks out of your application styles and in your mixins
+  As standards change, just change your mixin
+colors - A
+  tons of color functions
+  change default, changes all other colors
+  imagine theming
+calculations - A
+  simple math, calculate width from two variables.
+  Hall of wWAR bar: pass in start year, end year, and total value. Calculate width and margin from those.
+  position based on value passed in (if/then statement)
+
+ADVANCED:
+
+responsive - J 
+  new features make RWD much easier
+loops - A
+  nested loops to create a large number of styles for seizure meter stream events
+  7 different severity ratings
+  10 different sizes based on quantity
+compass - J
+  grid example
+sprites - A
+  throw some images in a folder
+  compiles the sprite, generates css for height/width/position
