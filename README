@@ -18,6 +18,11 @@ Adam
 
 CODE SCRIPT:
 
+INSTALLATION:
+  sudo gem install sass
+  sudo gem install compass
+
+
 BASICS:
 
 variables
