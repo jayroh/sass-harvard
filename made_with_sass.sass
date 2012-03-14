@@ -1,22 +1,21 @@
-=respond-to($device)
-
-  @if $device == handheld
-    @media only screen and (min-width : 320px)
-      @content
-
-  @if $device == handheld-landscape
-    @media only screen and (min-width : 321px)
-      @content
-
-  @if $device == handheld-portrait
-    @media only screen and (max-width : 320px)
-      @content
+#home
+  @media only screen and (min-width: 768px)
+    width: 50%
 
 // ===========================================================================
 
-#home
-  @media only screen and (min-width : 768px)
-    width: 50%
+=respond-to($device)
+  @if $device == handheld
+    @media only screen and (min-width: 320px)
+      @content
+  @if $device == handheld-landscape
+    @media only screen and (min-width: 321px)
+      @content
+  @if $device == handheld-portrait
+    @media only screen and (max-width: 320px)
+      @content
+
+// ===========================================================================
 
 #main-content
   +respond-to(handheld)
