@@ -1,12 +1,16 @@
-nav
-  ul
-    li
-      a
-        &:link
-          border: none
-        &:visited
-          border: red
-        &:hover
-          border: green
-        &:active  
-          border: orange
+ul 
+  display; block
+  position: absolute
+
+  li 
+    display: inline-block
+    margin-right: 5px
+
+    a
+      text-decoration: none
+      font-weight: normal
+
+      &.active
+        font-weight: bold
+      &:hover
+        text-decoration: underline
