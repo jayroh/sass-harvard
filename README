@@ -14,3 +14,45 @@ Adam
   
 Joel & Adam
   loops
+
+
+
+CODE SCRIPT:
+
+BASICS:
+
+variables
+  change color, updates everywhere
+nesting
+  oh wait, what's this ampersand thing?
+ampersand
+  two examples
+  point out variables (have some color manipulation going on, we'll get to that)
+extend
+  easier to manage style blocks, better CSS output
+mixins
+  CSS3 mixins, font-face
+  keep your vendor prefixes and IE hacks out of your application styles and in your mixins
+  As standards change, just change your mixin
+colors
+  tons of color functions
+  change default, changes all other colors
+  imagine theming
+calculations
+  simple math, calculate width from two variables.
+  Hall of wWAR bar: pass in start year, end year, and total value. Calculate width and margin from those.
+  position based on value passed in (if/then statement)
+
+ADVANCED:
+
+compass
+  grid example
+responsive
+  new features make RWD much easier
+loops
+  nested loops to create a large number of styles for seizure meter stream events
+  7 different severity ratings
+  10 different sizes based on quantity
+sprites
+  throw some images in a folder
+  compiles the sprite, generates css for height/width/position
