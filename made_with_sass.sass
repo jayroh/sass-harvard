@@ -1,10 +1,26 @@
-$company_color: #000064
+// Simple math
 
-a:link
-  color: $company_color
+$container_width: 1000px
+$photo_width: 480px
 
-aside
-  background-color: $company_color
+// timeline "bar" mixin
 
-nav ul li
-  color: $company_color
+@mixin bar($start, $end, $wwar: 0)
+  $year_width: 8px
+  $start_value: $start - 1870
+  $length: $end - $start
+  margin-left: $start_value * $year_width
+  width: $length * $year_width
+  div
+    @if $end > 1970
+      right: 0
+    @else
+      left: 0
+
+// Usage examples
+
+.caption
+  width: $container_width - $photo_width
+
+#babe-ruth
+  +bar(1914,1935,418.9)

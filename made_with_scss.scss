@@ -1,7 +1,26 @@
-body {
-  h1 {
-    border : solid 1px green;
-    display : block;
-    width : 50px - 20px;
-  }
-}
+// Simple math
+
+$container_width: 1000px;
+$photo_width: 480px;
+
+// timeline "bar" mixin
+
+@mixin bar($start, $end, $wwar: 0) {
+  $year_width: 8px;
+  $start_value: $start - 1870;
+  $length: $end - $start;
+  margin-left: $start_value * $year_width;
+  width: $length * $year_width;
+  div {
+    @if $end > 1970 {
+      right: 0; }
+    @else {
+      left: 0; } } }
+
+// Usage examples
+
+.caption {
+  width: $container_width - $photo_width; }
+
+#babe-ruth {
+  @include bar(1914, 1935, 418.9); }
