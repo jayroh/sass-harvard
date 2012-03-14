@@ -1,7 +1,48 @@
-body {
+// Rounded Corners mixin
+
+@mixin border_radius($radius: 10px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius; }
+
+// Box Shadow mixin
+
+@mixin box_shadow($color: #AAA, $values: 0 0 5px) {
+  -webkit-box-shadow: $color $values;
+  -moz-box-shadow: $color $values;
+  box-shadow: $color $values; }
+
+// Linear Gradient mixin
+
+@mixin linear_gradient($start, $end) {
+  background-color: $start;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($end));
+  background-image: -webkit-linear-gradient(top, $start, $end);
+  background-image: -moz-linear-gradient(top, $start, $end);
+  background-image: -ms-linear-gradient(top, $start, $end);
+  background-image: -o-linear-gradient(top, $start, $end);
+  background-image: linear-gradient(top, $start, $end);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$start}', EndColorStr='#{$end}'); }
+
+// @font-face mixin
+
+@mixin font-face {
+  font-family: 'ChunkFiveRegular';
+  src: url('/fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/Chunkfive-webfont.woff') format('woff'), url('/fonts/Chunkfive-webfont.ttf')  format('truetype'), url('/fonts/Chunkfive-webfont.svg#svgFontName') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+// In use
+
+header {
+  @include border_radius;
+  @include box_shadow;
+  @include linear_gradient(black, orange);
   h1 {
-    border : solid 1px green;
-    display : block;
-    width : 100%;
+    @include font_face;
   }
 }
+
+aside {
+  @include border_radius(5px);
+  @include box_shadow(#999, 2px 2px 2px); }
