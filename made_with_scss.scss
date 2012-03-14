@@ -1,27 +1,3 @@
-@import "compass";
-@import "susy";
-
-$total-cols             : 4;
-$col-width              : 25em;
-$gutter-width           : 2em;
-$side-gutter-width      : 1em;
-$show-grid-backgrounds  : true;
-
-body{
-  #container {
-    @include container;
-    @include susy-grid-background;
-
-    header { @include full; }
-
-    .left  { 
-      @include alpha;
-      @include columns(2); 
-    }
-
-    .right { 
-      @include omega;
-      @include columns(2); 
-    }
-  }
-}
+@import "compass/utilities/sprites";
+@import "icons/*.png";
+@include all-icons-sprites(true);
