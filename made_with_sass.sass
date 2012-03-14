@@ -1,3 +1,20 @@
+// Rounded Corners mixin
+
+@mixin border_radius($radius: 10px)
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  border-radius: $radius
+
+// Severity colors
+
+$seizure_severity_1: #ffc3d4
+$seizure_severity_2: #ff7295
+$seizure_severity_3: #ff184a
+$seizure_severity_4: #ae0037
+$seizure_severity_5: #4c001e
+
+// Example
+
 .event-seizure_survey
   span.icon
     @for $quantity from 1 through 7

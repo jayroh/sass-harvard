@@ -1,7 +1,46 @@
-body {
-  h1 {
-    border : solid 1px green;
-    display : block;
-    width : 100%;
-  }
-}
+// Rounded Corners mixin
+
+@mixin border_radius($radius: 10px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius; }
+
+// Severity colors
+
+$seizure_severity_1: #ffc3d4;
+$seizure_severity_2: #ff7295;
+$seizure_severity_3: #ff184a;
+$seizure_severity_4: #ae0037;
+$seizure_severity_5: #4c001e;
+
+// Example
+
+.event-seizure_survey {
+  span.icon {
+    @for $quantity from 1 through 7 {
+      @for $severity from 1 through 10 {
+        &.rating-severity-#{$quantity}-#{$severity} {
+          $ss_width: $quantity * 2 + 6px;
+          height: $ss_width;
+          width: $ss_width;
+          @include border_radius($ss_width / 2);
+          @if $severity == 1 {
+            background-color: $seizure_severity_1; }
+          @else if $severity == 2 {
+            background-color: $seizure_severity_1; }
+          @else if $severity == 3 {
+            background-color: $seizure_severity_2; }
+          @else if $severity == 4 {
+            background-color: $seizure_severity_2; }
+          @else if $severity == 5 {
+            background-color: $seizure_severity_3; }
+          @else if $severity == 6 {
+            background-color: $seizure_severity_3; }
+          @else if $severity == 7 {
+            background-color: $seizure_severity_4; }
+          @else if $severity == 8 {
+            background-color: $seizure_severity_4; }
+          @else if $severity == 9 {
+            background-color: $seizure_severity_5; }
+          @else if $severity == 10 {
+            background-color: $seizure_severity_5; } } } } } }
