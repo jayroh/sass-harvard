@@ -1,10 +1,26 @@
-$company_color: #000064
+.notification
+  border: solid 1px gray
+  background-color: green
+  margin: 1em 0
+  padding: .5em
 
-a:link
-  color: $company_color
+.big-and-loud
+  font-size: 2em
+  font-weight: bold
 
-aside
-  background-color: $company_color
+.custom-font
+  font-family: 'Prosto One', cursive
+  font-size: 14px
+  font-weight: 400
+  font-style: normal
 
-nav ul li
-  color: $company_color
+.error
+  @extend .notification
+  @extend .big-and-loud
+  background-color: pink
+  border-color: red
+  color: #fff
+
+article p.intro
+  @extend .custom-font
+  margin-bottom: 10px

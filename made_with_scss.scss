@@ -1,7 +1,31 @@
-body {
-  h1 {
-    border : solid 1px green;
-    display : block;
-    width : 100%;
-  }
+.notification {
+  border: solid 1px gray;
+  background-color: green;
+  margin: 1em 0;
+  padding: .5em;
+}
+
+.big-and-loud {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.custom-font {
+  font-family: 'Prosto One', cursive;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.error {
+  @extend .notification;
+  @extend .big-and-loud;
+  background-color: pink;
+  border-color: red;
+  color: #fff;
+}
+
+article p.intro {
+  @extend .custom-font;
+  margin-bottom: 10px;
 }
