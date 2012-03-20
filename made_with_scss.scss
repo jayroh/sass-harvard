@@ -6,11 +6,6 @@
 
 
 
-
-
-
-
-
 // ===========================================================================
 
 @mixin respond-to($device) {
@@ -34,7 +29,8 @@
 // ===========================================================================
 
 #main-content {
-  @include respond-to(handheld) {
-    width: 40%;
-  }
+  width: 60%;
+  
+  @include respond-to(handheld) { width: 40%; }
+  @include respond-to(handheld-portrait) { width: 50%; }
 }
